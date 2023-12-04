@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 5vh;
+            padding:10%;
+        }
+        .scrollable-text{
+            position: absolute;
+            white-space: nowrap;
+            animation: scrollText 100s linear infinite;
+        }
+        .blinking-text{
+            animation: blinkText 20s alternate infinite;
+        }
+        @keyframes scrollText{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        
+        }
+        @keyframes blinkText{
+            0%,100% {
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        }
+
+    </style>
+    <title>SCROLLABLE AND BLINKING TEXT</title>
+</head>
+<body>
+    <div class="scrollable-text">
+    THIs is a scroling text that can scroll 
+</div>
+    <div class="blinking-text">
+    <p> Blinking text</p>
+    <p>this can blink</p>
+</div>
+</body>
+</html>
